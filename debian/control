@@ -1,0 +1,44 @@
+Source: persistent-cache-cpp
+Priority: optional
+Maintainer: Adam Boardman <adamboardman@gmail.com>
+XSBC-Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Build-Depends: cmake,
+               cmake-extras (>= 0.10),
+               debhelper (>= 9),
+               devscripts,
+               doxygen,
+               libboost-filesystem-dev,
+               libgtest-dev,
+               libleveldb-dev,
+               lsb-release,
+               pkg-config,
+               python3 <!nocheck>,
+Standards-Version: 3.9.6
+XS-Testsuite: autopkgtest
+Section: libs
+Homepage: https://launchpad.net/persistent-cache-cpp
+# if you don't have have commit access to this branch but would like to upload
+# directly to Ubuntu, don't worry: your changes will be merged back into the
+# upstream branch
+Vcs-Bzr: lp:persistent-cache-cpp
+Vcs-Browser: https://code.launchpad.net/persistent-cache-cpp
+
+Package: persistent-cache-cpp-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends},
+         libboost-dev,
+         libleveldb-dev,
+         pkg-config,
+Description: Cache of key-value pairs with persistent storage for C++ 11
+ A persistent cache for arbitrary (possibly large amount of data, such as
+ image files) that is fast, scalable, and crash-proof.
+
+Package: persistent-cache-cpp-doc
+Section: doc
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends},
+Description: Documentation for persistent-cache-cpp-dev
+ Examples and API reference.

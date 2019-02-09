@@ -1,0 +1,9 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+includedir=${prefix}/include
+libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+
+Name: lib@LIBNAME@
+Description: Cache of key-value pairs with persistent storage for C++
+Version: @LIBVERSION@
+Libs: -L${libdir} -l@LIBNAME@ -lleveldb
+Cflags: -I${includedir}

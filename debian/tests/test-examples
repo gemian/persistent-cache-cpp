@@ -1,0 +1,38 @@
+#!/bin/sh
+
+#
+# Copyright (C) 2015 Canonical Ltd.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Lesser General Public License version 3 as
+# published by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+# Authored by: Michi Henning <michi.henning@canonical.com>
+#
+
+set -e  # Fail if any command fails.
+
+WORKDIR=$(mktemp -d)
+trap "rm -rf $WORKDIR" 0 INT QUIT ABRT PIPE TERM
+cd $WORKDIR
+
+cp /usr/share/doc/persistent-cache-cpp/examples/string_cache.cpp .
+cp /usr/share/doc/persistent-cache-cpp/examples/person_cache.cpp .
+
+g++ --std=c++11 -o string_cache string_cache.cpp `pkg-config --cflags --libs libpersistent-cache-cpp`
+[ -x string_cache ]
+g++ --std=c++11 -o person_cache person_cache.cpp `pkg-config --cflags --libs libpersistent-cache-cpp`
+[ -x person_cache ]
+
+./string_cache
+./person_cache
+
+echo "PASSED: autopkg tests"

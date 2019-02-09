@@ -1,0 +1,3 @@
+usr/include/core/*
+/usr/lib/*/libpersistent-cache-cpp.a
+/usr/lib/*/pkgconfig/*.pc

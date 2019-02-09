@@ -1,0 +1,57 @@
+persistent-cache-cpp (1.0.4+gemian) stretch; urgency=medium
+
+  * Building for Gemian
+
+ -- Adam Boardman <adamboardman@gmail.com>  Sat, 9 Feb 2019 14:57:00 +0000
+
+persistent-cache-cpp (1.0.4+16.10.20160505.5-0ubuntu1) yakkety; urgency=medium
+
+  [ CI Train Bot ]
+  * No-change rebuild.
+
+ -- Michi Henning <michi.henning@canonical.com>  Thu, 05 May 2016 05:52:21 +0000
+
+persistent-cache-cpp (1.0.4+16.04.20160117-0ubuntu2) yakkety; urgency=medium
+
+  * No-change rebuild to pick up -fPIE on amd64.
+
+ -- Graham Inggs <ginggs@ubuntu.com>  Wed, 04 May 2016 17:55:45 +0200
+
+persistent-cache-cpp (1.0.4+16.04.20160117-0ubuntu1) xenial; urgency=medium
+
+  [ Michi Henning ]
+  * Fixed assertion failure when move-constructing a stats instance from
+    the internal instance.
+
+  [ CI Train Bot ]
+  * No-change rebuild.
+
+ -- Michi Henning <michi.henning@canonical.com>  Sun, 17 Jan 2016 22:35:54 +0000
+
+persistent-cache-cpp (1.0.4+15.10.20150819.2-0ubuntu1) wily; urgency=medium
+
+  [ Michi Henning ]
+  * Added average hit and miss run stats.
+
+  [ CI Train Bot ]
+  * New rebuild forced.
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Wed, 19 Aug 2015 21:50:26 +0000
+
+persistent-cache-cpp (1.0.3+15.10.20150807-0ubuntu1) wily; urgency=medium
+
+  [ Michi Henning ]
+  * Suppressed lintian warning about doxygen's use of jquery.js.
+  * Added missing dependency to autopkg test.
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Fri, 07 Aug 2015 11:09:03 +0000
+
+persistent-cache-cpp (1.0.0+15.10.20150805-0ubuntu1) wily; urgency=medium
+
+  [ Michi Henning ]
+  * Initial release
+
+  [ CI Train Bot ]
+  * New rebuild forced.
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Wed, 05 Aug 2015 00:21:58 +0000

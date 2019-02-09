@@ -1,0 +1,10 @@
+Examples in this directory:
+
+- string_cache
+
+  Illustrates how to use the cache with keys, values, and metadata of type string.
+
+- person_cache
+
+  Simple example to illustrate how to use the cache with a custom type Person.
+  The important thing is to specialize the CacheCode template in namespace core.
